@@ -13,5 +13,6 @@
         {
             $this->call(CategoriesTableSeeder::class);
             $this->call(ProductTableSeeder::class);
+            $this->call(CouponTableSeeder::class);
         }
     }
