@@ -23,6 +23,7 @@ class ProductTableSeeder extends Seeder
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . 'inch' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 326 RAM',
                 'price' => rand(149999, 249999),
                 'description' => $faker->text(1000),
+                'image' => 'products/April2020/laptop-' . $i . '.jpg'
             ])->categories()->attach(1);
         }
 
@@ -33,6 +34,7 @@ class ProductTableSeeder extends Seeder
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . 'inch' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 326 RAM',
                 'price' => rand(149999, 249999),
                 'description' => $faker->text(1000),
+                'image' => 'products/April2020/desktop-' . $i . '.jpg'
             ])->categories()->attach(2);
         }
 
@@ -43,6 +45,7 @@ class ProductTableSeeder extends Seeder
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . 'inch' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 326 RAM',
                 'price' => rand(149999, 249999),
                 'description' => $faker->text(1000),
+                'image' => 'products/April2020/phone-' . $i . '.jpg'
             ])->categories()->attach(3);
         }
 
@@ -53,6 +56,7 @@ class ProductTableSeeder extends Seeder
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . 'inch' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 326 RAM',
                 'price' => rand(149999, 249999),
                 'description' => $faker->text(1000),
+                'image' => 'products/April2020/tv-' . $i . '.jpg'
             ])->categories()->attach(4);
         }
 
@@ -63,6 +67,7 @@ class ProductTableSeeder extends Seeder
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . 'inch' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 326 RAM',
                 'price' => rand(149999, 249999),
                 'description' => $faker->text(1000),
+                'image' => 'products/April2020/camera-' . $i . '.jpg'
             ])->categories()->attach(5);
         }
 
@@ -73,6 +78,7 @@ class ProductTableSeeder extends Seeder
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . 'inch' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 326 RAM',
                 'price' => rand(149999, 249999),
                 'description' => $faker->text(1000),
+                'image' => 'products/April2020/appliance-' . $i . '.jpg'
             ])->categories()->attach(6);
         }
     }

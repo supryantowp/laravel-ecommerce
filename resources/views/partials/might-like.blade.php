@@ -4,7 +4,7 @@
         <div class="might-like-grid">
             @foreach ($mightAlsoLike as $like)
             <a href="{{route('shop.show', $like->slug)}}" class="might-like-product">
-                <img src="{{ asset('img/products/' .$like->slug . '.png') }}" alt="product">
+                <img src="{{ productImage($like->image) }}" alt="product">
                 <div class="might-like-product-name">{{$like->name}}</div>
                 <div class="might-like-product-price">{{$like->presentPrice()}}</div>
             </a>
