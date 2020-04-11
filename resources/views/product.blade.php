@@ -21,13 +21,19 @@
 <div class="product-section container">
     <div>
         <div class="product-section-image">
-            <img src="{{ productImage($product->image) }}" alt="product">
+            <img src="{{ productImage($product->image) }}" alt="product" class="active" id="curentImage">
         </div>
 
-        <div>
+        <div class="product-section-images ">
+
+            <div class="product-section-thumbnail selected">
+                <img src="{{productImage($product->image)}}" alt="">
+            </div>
             @if ($product->images)
             @foreach (json_decode($product->images, true) as $item)
-            <img src="{{productImage($item)}}" alt="">
+            <div class="product-section-thumbnail ">
+                <img src="{{productImage($item)}}" alt="">
+            </div>
             @endforeach
             @endif
         </div>
@@ -57,4 +63,27 @@
 @include('partials.might-like')
 
 
+@endsection
+
+@section('extra-js')
+<script>
+    const curnImage = document.querySelector('#curentImage')
+    let images = document.querySelectorAll('.product-section-thumbnail')
+
+    images.forEach(element => element.addEventListener('click', thumbnailClick))
+
+    function thumbnailClick(e)
+    {
+        curnImage.classList.remove('active')
+        
+        curnImage.addEventListener('transitionend', () => {
+            curnImage.src = this.querySelector('img').src
+            curnImage.classList.add('active')
+        })
+
+        images.forEach(element => element.classList.remove('selected'))
+        this.classList.add('selected')
+    }
+
+</script>
 @endsection
