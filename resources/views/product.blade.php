@@ -25,9 +25,11 @@
         </div>
 
         <div>
+            @if ($product->images)
             @foreach (json_decode($product->images, true) as $item)
-            {{$item}}
+            <img src="{{productImage($item)}}" alt="">
             @endforeach
+            @endif
         </div>
     </div>
 
